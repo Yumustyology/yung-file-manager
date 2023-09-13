@@ -4,7 +4,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/Yumustyology/yung-cloud-file-manager?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/Yumustyology/yung-cloud-file-manager?style=flat-square)
 
-Yung Cloud File Manager is a feature-rich cloud storage system built with Nest.js, Firebase Cloud Storage, NextAuth.js, and TypeScript. It provides a secure and efficient solution for managing your files and data in the cloud.
+Yung Cloud File Manager is a feature-rich cloud storage system built with Next.js, Firebase Cloud Storage, NextAuth.js, and TypeScript. It provides a secure and efficient solution for managing your files and data in the cloud.
 
 ## Features
 
@@ -25,7 +25,7 @@ To get started with Yung Cloud File Manager, follow these steps:
 2. Set up your Firebase project and configure the necessary credentials.
 3. Install dependencies using `npm install`.
 4. Configure your environment variables.
-5. Run the application with `npm run start`.
+5. Run the application with `npm run dev`.
 
 ## Support
 
