@@ -39,7 +39,6 @@ function StorageDetailList() {
     <>
     {storageList.map((item,index)=>(
      <StorageDetailItem item={item} key={index} />
-
     ))}
       
     </>

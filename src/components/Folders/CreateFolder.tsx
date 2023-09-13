@@ -5,7 +5,7 @@ import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { ParentFolderIdContext } from "@/Context/ParentFolderIdContext";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { newItemBtnStyles } from "@/utils/utils";
 import { AiFillFolderAdd, AiFillFileAdd } from 'react-icons/ai'
 import { FcFolder } from 'react-icons/fc'
@@ -24,24 +24,29 @@ function CreateFolder() {
 
 
   const onCreate = async () => {
-   try {
-    console.log(folderName)
-    await setDoc(doc(db, "Folders", docId), {
-      name: folderName,
-      id: docId,
-      createBy: session?.user?.email,
-      parentFolderId: parentFolderId
-    })
-    showToastMsg('Folder Created!','folder-creation')
-   } catch (error) {
-    showToastMsg('An Error Occurred, Retry...','folder-creation-error')
-   }
+    try {
+      console.log(folderName)
+      await setDoc(doc(db, "Folders", docId), {
+        name: folderName,
+        id: docId,
+        createBy: session?.user?.email,
+        parentFolderId: parentFolderId
+      })
+      showToastMsg('Folder Created!', 'folder-creation')
+    } catch (error) {
+      showToastMsg('An Error Occurred, Retry...', 'folder-creation-error')
+    }
   }
 
 
   return (
     <div>
-      <button className={newItemBtnStyles} onClick={() => document.getElementById('my_modal_1')?.showModal()}>
+      <button className={newItemBtnStyles} onClick={() => {
+        const myModal = document.getElementById('my_modal_1') as HTMLDialogElement;
+        if (myModal) {
+          myModal.showModal();
+        }
+      }}>
         <span className='text-[13px]'>Add New Folder</span>
         <span className='flex item-center mt-[1px]'><AiFillFolderAdd color={'#fff'} style={{ color: '#fff' }} size={19} /></span>
       </button>

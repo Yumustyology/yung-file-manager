@@ -56,10 +56,10 @@ function StorageInfo() {
       </h2>
       <div className='w-full
         bg-gray-200  h-2.5 flex'>
-        <div className='bg-blue-600 h-2.5 w-[25%]'></div>
-        <div className='bg-green-600 h-2.5 w-[35%]'></div>
-        <div className='bg-yellow-400 h-2.5 w-[15%]'></div>
-
+        <div className=' bg-green-200 h-2.5 w-[25%]'></div>
+        <div className='bg-blue-200 h-2.5 w-[20%]'></div>
+        <div className='bg-yellow-200 h-2.5 w-[15%]'></div>
+        <div className='bg-red-200  h-2.5 w-[35%]'></div>
       </div>
 
     </div>

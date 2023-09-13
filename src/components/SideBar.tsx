@@ -6,7 +6,7 @@ import UploadFileModal from './Files/UploadFileModal'
 
 const SideBar = () => {
     return (
-        <div className='w-[250px] bg-white h-screen sticky top-0 z-10 shadow-[#46474a] shadow-md p-5'>
+        <div className='w-[280px] bg-white h-screen sticky top-0 z-10 shadow-[#46474a] shadow-md p-5'>
             <div className='flex justify-center'>
                 <Image src='/logo.png' alt='logo' width={40} height={60} />
             </div>
@@ -19,7 +19,7 @@ const SideBar = () => {
 
             <div>
                 {menu.list.map((item, index) => (
-                    <div key={item.id} className='flex gap-4 item-center p-2 mt-3 px-3 text-gray-500 hover:text-gray-400 flex-row hover:bg-gray-300 cursor-pointer rounded-sm'>
+                    <div key={item.id} className='flex gap-8 item-center p-2 mt-3 px-3 text-gray-500 hover:text-gray-400 flex-row hover:bg-gray-300 cursor-pointer rounded-sm'>
                         <span>{item.icon}</span>
                         <h2>{item.name}</h2>
                     </div>

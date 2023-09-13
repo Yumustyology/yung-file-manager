@@ -15,6 +15,7 @@ function UploadFileModal() {
     ParentFolderIdContext
   );
 
+
   const docId = Date.now();
   const db = getFirestore(app);
   const storage = getStorage(app);
@@ -59,7 +60,12 @@ function UploadFileModal() {
   };
   return (
     <div>
-      <button className={newItemBtnStyles} onClick={() => document.getElementById("upload_file")?.showModal()}>
+      <button className={newItemBtnStyles} onClick={() => {
+        const uploadFileModal = document.getElementById("upload_file") as HTMLDialogElement;
+        if (uploadFileModal) {
+          uploadFileModal.showModal();
+        }
+      }}>
         <span className='text-[13px]'>Add New File</span>
         <span className='flex item-center mt-[1px]'><AiFillFileAdd color={'#fff'} style={{ color: '#fff' }} size={19} /></span>
       </button>
