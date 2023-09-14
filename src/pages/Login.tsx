@@ -10,7 +10,6 @@ const Login = () => {
   useEffect(() => {
     if (session?.user?.email) {
       router.push("/")
-      console.log("Session ", session)
     }
   }, [session])
 
