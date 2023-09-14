@@ -5,6 +5,7 @@ import { CreateFolder } from '.'
 import UploadFileModal from './Files/UploadFileModal'
 
 const SideBar = () => {
+
     return (
         <div className='w-[280px] bg-white h-screen sticky top-0 z-10 shadow-[#46474a] shadow-md p-5'>
             <div className='flex justify-center'>

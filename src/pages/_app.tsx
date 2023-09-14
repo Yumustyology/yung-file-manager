@@ -22,7 +22,6 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
               <Storage />
             </div>
           </div>
-          {/* <CreateFolder /> */}
         </div>
         <ToastContainer />
       </SessionProvider>
