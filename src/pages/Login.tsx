@@ -8,8 +8,9 @@ const Login = () => {
   const router = useRouter()
 
   useEffect(() => {
-    if (session?.user?.email) {
+    if (session) {
       router.push("/")
+      console.log("session", session)
     }
   }, [session])
 
