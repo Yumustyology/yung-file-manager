@@ -16,11 +16,9 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
             <div className='col-span-2'>
               <Component {...pageProps} />
             </div>
-            <div className="bg-gray-200 p-5
-         order-first md:order-last"
-            >
+            <>
               <Storage />
-            </div>
+            </>
           </div>
         </div>
         <ToastContainer />

@@ -15,7 +15,7 @@ const Login = () => {
   }, [session])
 
   return (
-    <div className="flex justify-center items-center mt-[50%]">
+    <div className="flex justify-center items-center w-screen h-screen">
       <button className='bg-[#46474a] p-2 rounded-xl px-3 text-white' onClick={() => signIn()}>
         Google Login
       </button>
