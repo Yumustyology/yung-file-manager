@@ -3,18 +3,19 @@ import Image from 'next/image'
 import menu from '@/assets/js/menu'
 import { CreateFolder } from '.'
 import UploadFileModal from './Files/UploadFileModal'
+import { useSession } from 'next-auth/react'
 
 const SideBar = () => {
-
-    return (
+    const { data: session } = useSession();
+    return session && (
         <div className='w-[280px] bg-white h-screen sticky top-0 z-10 shadow-[#46474a] shadow-md p-5'>
             <div className='flex justify-center'>
                 <Image src='/logo.png' alt='logo' width={40} height={60} />
             </div>
             <div className='mt-3' />
-        
+
             <CreateFolder />
-            <div className="mt-2 mb-2"/>
+            <div className="mt-2 mb-2" />
             <UploadFileModal />
             <div className='mt-1' />
 
